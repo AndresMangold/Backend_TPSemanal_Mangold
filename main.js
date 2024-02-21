@@ -4,7 +4,7 @@ class Productcases {
     }
 
     addProduct (title, description, price, thumbnail, code, stock) {
-        if (!title || !description || !price || !thumbnail || !code || !stock) {
+        if (!title || !description || !price || !thumbnail || !code || stock === null) {
             console.error('Todas las referencias deben ser completadas');
             return;
         }
@@ -53,3 +53,5 @@ console.log(cases.getProducts());
 console.log(cases.getProductById(1));
 console.log(cases.getProductById(2));
 console.log(cases.getProductById(5)); 
+
+module.exports = Productcases;
