@@ -84,5 +84,9 @@ class ProductManager {
 
 const productManager = new ProductManager('./productos.json');
 
+console.log('cabezón');
+
+productManager.addProduct("Nuevo Producto", "Descripción del nuevo producto", 29.99, "imagen_nuevo_producto.jpg", "P003", 75);
+
 module.exports = ProductManager;
 
