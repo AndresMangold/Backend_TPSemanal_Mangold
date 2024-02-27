@@ -1,34 +1,35 @@
-const fs = require('fs');
+const fs = require('fs').promises;
 
 class ProductManager {
     constructor(filePath) {
         this.products = [];
-        
         this.filePath = filePath;
-        
-        this.loadProducts();
+        this.init();
     }
 
-    loadProducts() {
+    async init() {
+        await this.loadProducts();
+    }
+
+    async loadProducts() {
         try {
-            const data = fs.readFileSync(this.filePath, 'utf8');
+            const data = await fs.readFile(this.filePath, 'utf8');
             this.products = JSON.parse(data);
         } catch (err) {
             console.error('Error leyendo el archivo:', err);
         }
     }
 
-    saveProducts() {
+    async saveProducts() {
         try {
-            fs.writeFileSync(this.filePath, JSON.stringify(this.products, null, 2));
+            await fs.writeFile(this.filePath, JSON.stringify(this.products, null, 2));
         } catch (err) {
             console.error('Error escribiendo el archivo:', err);
         }
     }
 
-    addProduct(title, description, price, thumbnail, code, stock) {
+    async addProduct(title, description, price, thumbnail, code, stock) {
         if (!title || !description || !price || !thumbnail || !code || stock === null) {
-            console.error('Todas las referencias deben ser completadas');
             return;
         }
 
@@ -49,7 +50,7 @@ class ProductManager {
             stock
         };
         this.products.push(newProduct);
-        this.saveProducts();
+        await this.saveProducts(); 
     }
 
     getProducts() {
@@ -82,11 +83,14 @@ class ProductManager {
     }
 }
 
-const productManager = new ProductManager('./productos.json');
+(async () => {
+    const productManager = new ProductManager('./productos.json');
 
-productManager.addProduct("Nuevo Producto", "Descripción del nuevo producto", 29.99, "imagen_nuevo_producto.jpg", "P003", 75);
+    await Promise.all([
+        productManager.addProduct("Nuevo Producto", "Descripción del nuevo producto", 29.99, "imagen_nuevo_producto.jpg", "P003", 75),
+        productManager.addProduct("Nuevo Producto2", "Descripción del nuevo producto2", 19.99, "imagen_nuevo_producto.jpg", "P004", 85),
+        productManager.addProduct("Nuevo Producto3", "Descripción del nuevo producto3", 39.99, "imagen_nuevo_producto.jpg", "P005", 95)
+    ]);
 
-productManager.addProduct("Nuevo Producto2", "Descripción del nuevo producto2", 19.99, "imagen_nuevo_producto.jpg", "P004", 85);
-
-module.exports = ProductManager;
-
+    module.exports = ProductManager;
+})();
