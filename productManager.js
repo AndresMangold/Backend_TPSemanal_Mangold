@@ -89,7 +89,9 @@ class ProductManager {
     await Promise.all([
         productManager.addProduct("Nuevo Producto", "Descripción del nuevo producto", 29.99, "imagen_nuevo_producto.jpg", "P003", 75),
         productManager.addProduct("Nuevo Producto2", "Descripción del nuevo producto2", 19.99, "imagen_nuevo_producto.jpg", "P004", 85),
-        productManager.addProduct("Nuevo Producto3", "Descripción del nuevo producto3", 39.99, "imagen_nuevo_producto.jpg", "P005", 95)
+        productManager.addProduct("Nuevo Producto3", "Descripción del nuevo producto3", 39.99, "imagen_nuevo_producto.jpg", "P005", 95),
+
+        productManager.addProduct("producto prueba", "este es un producto prueba", 200, "sin imagen", "abc123", 25),
     ]);
 
     module.exports = ProductManager;

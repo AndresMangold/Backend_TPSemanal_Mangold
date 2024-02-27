@@ -16,14 +16,5 @@
     "thumbnail": "imagen_nuevo_producto.jpg",
     "code": "P004",
     "stock": 85
-  },
-  {
-    "id": 3,
-    "title": "Nuevo Producto3",
-    "description": "Descripción del nuevo producto3",
-    "price": 39.99,
-    "thumbnail": "imagen_nuevo_producto.jpg",
-    "code": "P005",
-    "stock": 95
   }
 ]
