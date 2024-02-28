@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Nuevo Producto0",
+    "description": "Descripción del nuevo producto0",
+    "price": 29.99,
+    "thumbnail": "imagen_nuevo_producto.jpg",
+    "code": "P001",
+    "stock": 75
+  },
+  {
+    "id": 2,
+    "title": "Nuevo Producto2",
+    "description": "Descripción del nuevo producto2",
+    "price": 19.99,
+    "thumbnail": "imagen_nuevo_producto.jpg",
+    "code": "P002",
+    "stock": 85
+  },
+  {
+    "id": 3,
+    "title": "Nuevo Producto3",
+    "description": "Descripción del nuevo producto3",
+    "price": 39.99,
+    "thumbnail": "imagen_nuevo_producto.jpg",
+    "code": "P003",
+    "stock": 95
+  },
+  {
+    "id": 4,
+    "title": "Nuevo Producto4",
+    "description": "Descripción del nuevo producto4",
+    "price": 39.99,
+    "thumbnail": "imagen_nuevo_producto.jpg",
+    "code": "P004",
+    "stock": 95
+  },
+  {
+    "id": 5,
+    "title": "Nuevo Producto5",
+    "description": "Descripción del nuevo producto5",
+    "price": 39.99,
+    "thumbnail": "imagen_nuevo_producto.jpg",
+    "code": "P005",
+    "stock": 95
+  },
+  {
+    "id": 6,
+    "title": "Nuevo Producto6",
+    "description": "Descripción del nuevo producto6",
+    "price": 39.99,
+    "thumbnail": "imagen_nuevo_producto.jpg",
+    "code": "P006",
+    "stock": 95
+  },
+  {
+    "id": 7,
+    "title": "Nuevo Producto7",
+    "description": "Descripción del nuevo producto7",
+    "price": 39.99,
+    "thumbnail": "imagen_nuevo_producto.jpg",
+    "code": "P007",
+    "stock": 95
+  },
+  {
+    "id": 8,
+    "title": "Nuevo Producto8",
+    "description": "Descripción del nuevo producto8",
+    "price": 39.99,
+    "thumbnail": "imagen_nuevo_producto.jpg",
+    "code": "P008",
+    "stock": 95
+  },
+  {
+    "id": 9,
+    "title": "Nuevo Producto9",
+    "description": "Descripción del nuevo producto9",
+    "price": 39.99,
+    "thumbnail": "imagen_nuevo_producto.jpg",
+    "code": "P009",
+    "stock": 95
+  },
+  {
+    "id": 10,
+    "title": "producto prueba",
+    "description": "este es un producto prueba",
+    "price": 200,
+    "thumbnail": "sin imagen",
+    "code": "abc123",
+    "stock": 25
+  }
+]
